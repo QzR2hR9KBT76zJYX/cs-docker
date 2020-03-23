@@ -1,0 +1,223 @@
+hlcsg v2.5.3 rel Custom Build 1.7 (Dec  9 2002)
+Zoner's Half-Life Compilation Tools -- Custom Build
+Based on code modifications by Sean 'Zoner' Cavanaugh
+Based on Valve's version, modified with permission.
+Submit detailed bug reports to (merlinis@bigpond.net.au)
+-----  BEGIN  hlcsg -----
+Command line: C:\DOCUME~1\Owner\Desktop\ZONERS~1\hlcsg.exe "C:\Program Files\Valve\Steam\steamapps\videnfra_dwx\counter-strike\cstrike\maps\gg_dusty_fortress"
+Entering C:\Program Files\Valve\Steam\steamapps\videnfra_dwx\counter-strike\cstrike\maps\gg_dusty_fortress.map
+
+Current hlcsg Settings
+Name                 |  Setting  |  Default
+---------------------|-----------|-------------------------
+threads               [       1 ] [  Varies ]
+verbose               [     off ] [     off ]
+log                   [      on ] [      on ]
+developer             [       0 ] [       0 ]
+chart                 [     off ] [     off ]
+estimate              [     off ] [     off ]
+max texture memory    [ 4194304 ] [ 4194304 ]
+priority              [  Normal ] [  Normal ]
+
+noclip                [     off ] [     off ]
+null texture stripping[      on ] [      on ]
+clipnode economy mode [      on ] [      on ]
+onlyents              [     off ] [     off ]
+wadtextures           [      on ] [      on ]
+skyclip               [      on ] [      on ]
+hullfile              [    None ] [    None ]
+min surface area      [   0.500 ] [   0.500 ]
+brush union threshold [   0.000 ] [   0.000 ]
+
+Using mapfile wad configuration
+Wadinclude list :
+[zhlt.wad]
+
+0 brushes (totalling 0 sides) discarded from clipping hulls
+CreateBrush:
+ (1.00 seconds)
+SetModelCenters:
+ (0.00 seconds)
+CSGBrush:
+ (5.28 seconds)
+
+Using Wadfile: \documents and settings\owner\my documents\decals.wad
+ - Contains 0 used textures, 0.00 percent of map (225 textures in wad)
+Using Wadfile: \documents and settings\owner\desktop\wad\cstrike.wad
+ - Contains 1 used texture, 5.56 percent of map (123 textures in wad)
+Using Wadfile: \documents and settings\owner\desktop\wad\cs_dust.wad
+ - Contains 15 used textures, 83.33 percent of map (28 textures in wad)
+Using Wadfile: \documents and settings\owner\desktop\halflife.wad
+ - Contains 2 used textures, 11.11 percent of map (3116 textures in wad)
+
+added 1 additional animating textures.
+Texture usage is at 0.43 mb (of 4.00 mb MAX)
+6.70 seconds elapsed
+
+-----   END   hlcsg -----
+
+
+
+hlbsp v2.5.3 rel Custom Build 1.7 (Dec  9 2002)
+Zoner's Half-Life Compilation Tools -- Custom Build
+Based on code modifications by Sean 'Zoner' Cavanaugh
+Based on Valve's version, modified with permission.
+Submit detailed bug reports to (merlinis@bigpond.net.au)
+-----  BEGIN  hlbsp -----
+Command line: C:\DOCUME~1\Owner\Desktop\ZONERS~1\hlbsp.exe "C:\Program Files\Valve\Steam\steamapps\videnfra_dwx\counter-strike\cstrike\maps\gg_dusty_fortress"
+
+Current hlbsp Settings
+Name               |  Setting  |  Default
+-------------------|-----------|-------------------------
+threads             [       1 ] [  Varies ]
+verbose             [     off ] [     off ]
+log                 [      on ] [      on ]
+developer           [       0 ] [       0 ]
+chart               [     off ] [     off ]
+estimate            [     off ] [     off ]
+max texture memory  [ 4194304 ] [ 4194304 ]
+priority            [  Normal ] [  Normal ]
+
+noclip              [     off ] [     off ]
+nofill              [     off ] [     off ]
+null tex. stripping [      on ] [      on ]
+notjunc             [     off ] [     off ]
+subdivide size      [     240 ] [     240 ] (Min 64) (Max 512)
+max node size       [    1024 ] [    1024 ] (Min 64) (Max 4096)
+
+
+BSP generation successful, writing portal file 'C:\Program Files\Valve\Steam\steamapps\videnfra_dwx\counter-strike\cstrike\maps\gg_dusty_fortress.prt'
+6.73 seconds elapsed
+
+-----   END   hlbsp -----
+
+
+
+hlvis v2.5.3 rel Custom Build 1.7 (Dec  9 2002)
+Zoner's Half-Life Compilation Tools -- Custom Build
+Based on code modifications by Sean 'Zoner' Cavanaugh
+Based on Valve's version, modified with permission.
+Submit detailed bug reports to (merlinis@bigpond.net.au)
+-----  BEGIN  hlvis -----
+Command line: C:\DOCUME~1\Owner\Desktop\ZONERS~1\hlvis.exe "C:\Program Files\Valve\Steam\steamapps\videnfra_dwx\counter-strike\cstrike\maps\gg_dusty_fortress"
+ 593 portalleafs
+1669 numportals
+
+-= Current hlvis Settings =-
+Name               |  Setting  |  Default
+-------------------|-----------|-------------------------
+threads             [       1 ] [  Varies ]
+verbose             [     off ] [     off ]
+log                 [      on ] [      on ]
+developer           [       0 ] [       0 ]
+chart               [     off ] [     off ]
+estimate            [     off ] [     off ]
+max texture memory  [ 4194304 ] [ 4194304 ]
+max vis distance    [       0 ] [       0 ]
+priority            [  Normal ] [  Normal ]
+
+fast vis            [     off ] [     off ]
+full vis            [     off ] [     off ]
+
+
+BasePortalVis:
+ (5.02 seconds)
+LeafThread:
+ (87.23 seconds)
+average leafs visible: 142
+g_visdatasize:31717  compressed from 44475
+92.73 seconds elapsed [1m 32s]
+
+-----   END   hlvis -----
+
+
+
+hlrad v2.5.3 rel Custom Build 1.7 (Dec  9 2002)
+Zoner's Half-Life Compilation Tools -- Custom Build
+Based on code modifications by Sean 'Zoner' Cavanaugh
+Based on Valve's version, modified with permission.
+Submit detailed bug reports to (merlinis@bigpond.net.au)
+-----  BEGIN  hlrad -----
+Command line: C:\DOCUME~1\Owner\Desktop\ZONERS~1\hlrad.exe "C:\Program Files\Valve\Steam\steamapps\videnfra_dwx\counter-strike\cstrike\maps\gg_dusty_fortress"
+
+-= Current hlrad Settings =-
+Name                | Setting             | Default
+--------------------|---------------------|-------------------------
+threads              [                 1 ] [            Varies ]
+verbose              [               off ] [               off ]
+log                  [                on ] [                on ]
+developer            [                 0 ] [                 0 ]
+chart                [               off ] [               off ]
+estimate             [               off ] [               off ]
+max texture memory   [           4194304 ] [           4194304 ]
+priority             [            Normal ] [            Normal ]
+
+vismatrix algorithm  [          Original ] [          Original ]
+oversampling (-extra)[               off ] [               off ]
+bounces              [                 1 ] [                 1 ]
+ambient light        [ 0.000 0.000 0.000 ] [ 0.000 0.000 0.000 ]
+maximum light        [           255.000 ] [           256.000 ]
+circus mode          [               off ] [               off ]
+
+smoothing threshold  [            50.000 ] [            50.000 ]
+direct threshold     [            25.000 ] [            25.000 ]
+direct light scale   [             2.000 ] [             2.000 ]
+coring threshold     [             1.000 ] [             1.000 ]
+patch interpolation  [                on ] [                on ]
+
+texscale             [                on ] [                on ]
+patch subdividing    [                on ] [                on ]
+chop value           [            64.000 ] [            64.000 ]
+texchop value        [            32.000 ] [            32.000 ]
+
+global fade          [             1.000 ] [             1.000 ]
+global falloff       [                 2 ] [                 2 ]
+global light scale   [ 1.000 1.000 1.000 ] [ 1.000 1.000 1.000 ]
+global gamma         [ 0.500 0.500 0.500 ] [ 0.500 0.500 0.500 ]
+global light scale   [             1.000 ] [             1.000 ]
+global sky diffusion [             1.000 ] [             1.000 ]
+
+opaque entities      [                on ] [                on ]
+sky lighting fix     [                on ] [                on ]
+incremental          [               off ] [               off ]
+dump                 [               off ] [               off ]
+
+colour jitter        [       0.0 0.0 0.0 ] [       0.0 0.0 0.0 ]
+monochromatic jitter [       0.0 0.0 0.0 ] [       0.0 0.0 0.0 ]
+softlight hack       [   0.0 0.0 0.0 0.0 ] [   0.0 0.0 0.0 0.0 ]
+diffuse hack         [                on ] [                on ]
+spotlight points     [                on ] [                on ]
+
+custom shadows with bounce light
+                     [               off ] [               off ]
+rgb transfers        [               off ] [               off ]
+
+
+3498 faces
+Create Patches : 30046 base patches
+0 opaque faces
+407322 square feet [58654448.00 square inches]
+18 direct lights
+
+BuildFacelights:
+ (122.72 seconds)
+visibility matrix   :  53.8 megs
+BuildVisLeafs:
+ (131.16 seconds)
+MakeScales:
+ (126.94 seconds)
+SwapTransfers:
+ (38.63 seconds)
+Transfer Lists :    38308432 :   38.31M transfers
+       Indices :    13452692 :   12.83M bytes
+          Data :   153233728 :  146.14M bytes
+GatherLight:
+ (15.72 seconds)
+FinalLightFace:
+ (11.56 seconds)
+449.00 seconds elapsed [7m 29s]
+
+-----   END   hlrad -----
+
+
+

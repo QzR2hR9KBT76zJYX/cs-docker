@@ -1,0 +1,17 @@
+Rats: Bomb/Defuse
+Creator: Chris Spain
+Original Release: July 1, 2000
+
+Description:
+This classic map is in a small kitchen, and
+all players are the size of rats. Counter-
+Terrorists spawn inside the freezer and
+Terrorists spawn inside the pantry. 
+
+Terrorists:
+Plant the bomb behind the sink and prevent
+the Counter-Terrorists from defusing it.
+
+Counter-Terrorists:
+Eliminate the Terrorists and prevent the bomb
+from blowing up the kitchen!
