@@ -24,13 +24,10 @@ RUN set -x \
 	&& useradd -u $PUID -m steam \
 	&& su steam -c \
 		"mkdir -p ${STEAMCMDDIR} \
-		&& wget -qO- 'https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz' | tar -C ${STEAMCMDDIR} -zxvf -"
-
-COPY config/hlds.install ${STEAMCMDDIR}
-# COPY config/steamapps ${STEAMAPPEXE}/steamapps
-
-RUN	su steam -c \
-		"${STEAMCMDDIR}/steamcmd.sh +runscript hlds.install \
+		&& wget -qO- 'https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz' | tar -C ${STEAMCMDDIR} -zxvf - \
+	&& touch ${STEAMCMDDIR}/hlds.install \
+	&& echo -e "login anonymous \nforce_install_dir /home/steam/hlds \napp_set_config 90 mod cstrike \napp_update 90 \napp_update 90 \napp_update 90 validate \napp_update 90 validate \nquit" >> ${STEAMCMDDIR}/hlds.install \
+	&& ${STEAMCMDDIR}/steamcmd.sh +runscript hlds.install \
 	&& mkdir -p ${STEAMAPPDIR}/addons/metamod/dlls \
     && mkdir -p ${STEAMAPPDIR}/addons/dproto \
     && wget -qO- 'http://prdownloads.sourceforge.net/metamod/metamod-$metamod_version-linux.tar.gz?download' | tar -C ${STEAMAPPDIR}/addons/metamod/dlls -zxvf - \
@@ -41,6 +38,7 @@ RUN	su steam -c \
 	&& apt-get autoremove -y \
 	&& rm -rf /var/lib/apt/lists/*
 
+# COPY config/steamapps ${STEAMAPPEXE}/steamapps
 COPY config/cstrike ${STEAMAPPDIR}
 
 # Switch to user steam
