@@ -26,13 +26,25 @@ RUN set -x \
 		"mkdir -p ${STEAMCMDDIR} \
 		&& wget -qO- 'https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz' | tar -C ${STEAMCMDDIR} -zxvf - \
 	&& touch ${STEAMCMDDIR}/hlds.install \
-	&& echo -e "login anonymous \nforce_install_dir /home/steam/hlds \napp_set_config 90 mod cstrike \napp_update 90 \napp_update 90 \napp_update 90 validate \napp_update 90 validate \nquit" >> ${STEAMCMDDIR}/hlds.install \
+	&& { \
+            echo 'login anonymous'; \
+            echo 'force_install_dir /home/steam/hlds'; \
+            echo 'app_set_config 90 mod cstrike'; \
+            echo 'app_update 90'; \
+            echo 'app_update 90'; \
+            echo 'app_update 90 validate'; \
+            echo 'app_update 90 validate'; \
+            echo 'quit'; \
+    } > ${STEAMCMDDIR}/hlds.install \
 	&& ${STEAMCMDDIR}/steamcmd.sh +runscript hlds.install \
+	&& mkdir -p ~/.steam \
+	&& ln -s /home/steam/hlds ~/.steam/sdk32 \
+	&& ln -s /home/steam/steamcmd /home/steam/hlds/steamcmd \
 	&& mkdir -p ${STEAMAPPDIR}/addons/metamod/dlls \
     && mkdir -p ${STEAMAPPDIR}/addons/dproto \
-    && wget -qO- 'http://prdownloads.sourceforge.net/metamod/metamod-$metamod_version-linux.tar.gz?download' | tar -C ${STEAMAPPDIR}/addons/metamod/dlls -zxvf - \
-    && wget -qO- 'http://www.amxmodx.org/release/amxmodx-$amxmod_version-base-linux.tar.gz' | tar -C ${STEAMAPPDIR} -zxvf - \
-    && wget -qO- 'http://www.amxmodx.org/release/amxmodx-$amxmod_version-cstrike-linux.tar.gz' | tar -C ${STEAMAPPDIR} -zxvf -" \
+    && wget -qO- 'http://prdownloads.sourceforge.net/metamod/metamod-1.20-linux.tar.gz?download' | tar -C ${STEAMAPPDIR}/addons/metamod/dlls -zxvf - \
+    && wget -qO- 'http://www.amxmodx.org/release/amxmodx-1.8.2-base-linux.tar.gz' | tar -C ${STEAMAPPDIR} -zxvf - \
+    && wget -qO- 'http://www.amxmodx.org/release/amxmodx-1.8.2-cstrike-linux.tar.gz' | tar -C ${STEAMAPPDIR} -zxvf -" \
 	&& apt-get remove --purge -y \
 	   wget \
 	&& apt-get autoremove -y \
