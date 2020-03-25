@@ -60,7 +60,6 @@ WORKDIR $STEAMAPPEXE
 
 VOLUME $STEAMAPPEXE
 
-ENTRYPOINT ${STEAMAPPEXE}/hlds_run \
-			-game cstrike +maxplayers 20 +map cs_mansion
+ENTRYPOINT ./hlds_run -game cstrike +maxplayers 20 +map cs_mansion
 
 EXPOSE 27015/tcp 27015/udp
