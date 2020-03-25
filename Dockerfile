@@ -38,7 +38,7 @@ RUN set -x \
     } > ${STEAMCMDDIR}/hlds.install \
 	&& ${STEAMCMDDIR}/steamcmd.sh +runscript hlds.install \
 	&& mkdir -p ~/.steam \
-	&& ln -s /home/steam/hlds ~/.steam/sdk32 \
+	&& ln -s /home/steam/steamcmd/linux32 ~/.steam/sdk32 \
 	&& ln -s /home/steam/steamcmd /home/steam/hlds/steamcmd \
 	&& mkdir -p ${STEAMAPPDIR}/addons/metamod/dlls \
     && mkdir -p ${STEAMAPPDIR}/addons/dproto \
@@ -60,6 +60,6 @@ WORKDIR $STEAMAPPEXE
 
 VOLUME $STEAMAPPEXE
 
-ENTRYPOINT ./hlds_run -console -game cstrike +maxplayers 20 +map cs_mansion
+ENTRYPOINT ./hlds_run -game cstrike +maxplayers 20 +map cs_mansion
 
 EXPOSE 27015/tcp 27015/udp
